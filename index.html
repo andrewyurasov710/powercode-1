@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="{% static 'langs/img/icon.png' %}" type="image/x-icon">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <ol>
+        {% for lang in languages %}
+        <li><b>{{ lang.name }}</b><br>year:{{lang.year}k}</li>
+        {% endfor %}
+    </ol>
+    
+    <img src="{% static 'langs/img/logo.png' %}" width="300">
+</body>
+</html>
